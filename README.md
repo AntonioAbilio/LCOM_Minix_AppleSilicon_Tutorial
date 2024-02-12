@@ -168,7 +168,7 @@ Let's begin:
 		  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/b52bd947c5c015807efa664e4c6d3d2f299aa038/Resources/Serial/Serial_Port_Conf_1.png?raw=true") alt="Serial_Port_Configuration_SecondVM">
 	</div>
 
-9. Under "**Network**" click the random for Mac Address.
+9. Under "**Network**" click the "**Random**" button for "**MAC Address*"".
 
 	<div style="display: flex; justify-content: center;">
 		  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/29c418e65bb22e4445e56e575d17d534b825d379/Resources/Serial/Serial_Network_1.png?raw=true") alt="Serial_Port_Configuration_SecondVM">
