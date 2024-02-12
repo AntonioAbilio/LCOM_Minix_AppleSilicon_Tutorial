@@ -142,28 +142,47 @@ Let's begin:
 1.  First open [UTM](UTM://).
 2. Select your first Virtual Machine and left-click it.
 3. Now select "**clone**".
+
 	<div style="display: flex; justify-content: center;">
 		  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/2f4c536766cbddbbcbc23c8fc4953cb0b819a8f2/Resources/Serial/Serial_1.png?raw=true") alt="Clone_Machine">
 	</div>
 4. Open the "**settings**" of the Virtual Machine.
+
 5. Under "**devices**" click the "**+**" icon and select "**Serial**".
+
 	<div style="display: flex; justify-content: center;">
 		  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/b52bd947c5c015807efa664e4c6d3d2f299aa038/Resources/Serial/Serial_2.png?raw=true") alt="Serial_Port_Add">
 	</div>
+
 6. Now change your values so the configuration looks like this ... and save it:
+
 	<div style="display: flex; justify-content: center;">
 		  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/b52bd947c5c015807efa664e4c6d3d2f299aa038/Resources/Serial/Serial_Port_Conf_1.png?raw=true") alt="Serial_Port_Configuration_FirstVM">
 	</div>
+
 7. Now select the cloned Virtual Machine and repeat the steps 4 and 5.
 8. Now change your values so the configuration looks like this:
+
 	<div style="display: flex; justify-content: center;">
 		  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/b52bd947c5c015807efa664e4c6d3d2f299aa038/Resources/Serial/Serial_Port_Conf_2.png?raw=true") alt="Serial_Port_Configuration_SecondVM">
 	</div>
 
 9. Under "**Network**" click the random for Mac Address.
-	1. INSERT PHOTO
-10. Under "**Port Forwarding**" click on the first option and next click on the "**Edit**" button. Make sure the values are as follows ... click "**Save**":
-	1. INSERT PHOTO
+
+	<div style="display: flex; justify-content: center;">
+		  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/29c418e65bb22e4445e56e575d17d534b825d379/Resources/Serial/Serial_Network_1.png?raw=true") alt="Serial_Port_Configuration_SecondVM">
+	</div>
+
+10. Under "**Port Forwarding**" click on the first option and next click on the "**Edit**" button. 
+
+	<div style="display: flex; justify-content: center;">
+		  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/29c418e65bb22e4445e56e575d17d534b825d379/Resources/Serial/Serial_Network_2.png?raw=true") alt="Serial_Port_Configuration_SecondVM">
+	</div>
+	1. Make sure the values are as follows ... click "**Save**":
+		<div style="display: flex; justify-content: center;">
+			  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/29c418e65bb22e4445e56e575d17d534b825d379/Resources/Serial/Serial_Network_3.png?raw=true") alt="Serial_Port_Configuration_SecondVM">
+		</div>
+
 11. Finally save all changes by clicking "**Save**".
 
 # IMPORTANT
