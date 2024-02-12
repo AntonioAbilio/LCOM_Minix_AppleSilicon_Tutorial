@@ -142,11 +142,18 @@ Let's begin:
 3. Now select "**clone**".
 4. Open the "**settings**" of the Virtual Machine.
 5. Under "**devices**" click the "**+**" icon and select "**Serial**".
+	<div style="display: flex; justify-content: center;">
+		  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/b52bd947c5c015807efa664e4c6d3d2f299aa038/Resources/Serial/Serial_2.png?raw=true") alt="Serial_Port_Add">
+	</div>
 6. Now change your values so the configuration looks like this ... and save it:
-	1. INSERT PHOTO SERIAL 1
+	<div style="display: flex; justify-content: center;">
+		  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/b52bd947c5c015807efa664e4c6d3d2f299aa038/Resources/Serial/Serial_Port_Conf_1.png?raw=true") alt="Serial_Port_Configuration_FirstVM">
+	</div>
 7. Now select the cloned Virtual Machine and repeat the steps 4 and 5.
 8. Now change your values so the configuration looks like this ... and save it
-    1. INSERT PHOTO SERIAL 2
+	<div style="display: flex; justify-content: center;">
+		  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/b52bd947c5c015807efa664e4c6d3d2f299aa038/Resources/Serial/Serial_Port_Conf_2.png?raw=true") alt="Serial_Port_Configuration_SecondVM">
+	</div>
 
 
 
