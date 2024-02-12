@@ -157,14 +157,14 @@ Let's begin:
 6. Now change your values so the configuration looks like this ... and save it:
 
 	<div style="display: flex; justify-content: center;">
-		  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/b52bd947c5c015807efa664e4c6d3d2f299aa038/Resources/Serial/Serial_Port_Conf_1.png?raw=true") alt="Serial_Port_Configuration_FirstVM">
+		  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/b52bd947c5c015807efa664e4c6d3d2f299aa038/Resources/Serial/Serial_Port_Conf_2.png?raw=true") alt="Serial_Port_Configuration_FirstVM">
 	</div>
 
 7. Now select the cloned Virtual Machine and repeat the steps 4 and 5.
 8. Now change your values so the configuration looks like this:
 
 	<div style="display: flex; justify-content: center;">
-		  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/b52bd947c5c015807efa664e4c6d3d2f299aa038/Resources/Serial/Serial_Port_Conf_2.png?raw=true") alt="Serial_Port_Configuration_SecondVM">
+		  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/b52bd947c5c015807efa664e4c6d3d2f299aa038/Resources/Serial/Serial_Port_Conf_1.png?raw=true") alt="Serial_Port_Configuration_SecondVM">
 	</div>
 
 9. Under "**Network**" click the random for Mac Address.
@@ -185,14 +185,50 @@ Let's begin:
 
 11. Finally save all changes by clicking "**Save**".
 
+## Testing Serial Connection
+
+Great! You completed the setup now let's test if everything's working properlly.
+First download the serial_test_files from the "**Releases Tab**".
+
+### Quick note:
+
+I did not make these files, I only modified them slightly (file names and service name) the original owner is [Professor Pedro Ferreira Souto](https://sigarra.up.pt/feup/pt/func_geral.formview?p_codigo=238172). 
+**A big thanks to him**. 
+The provided program saved me a whole lot of time.
+
+1. Turn on both VM's (note: The second machine will not turn on unless the first one is on).
+2. The next steps need to be performed on both Virtual Machines:
+	1. Now copy the "**lab7_testing" file to your minix's user home directory.
+	2. Next cd to the directory where the file was copied to and execute the following command ``` chmod +x ./lab7_testing ```
+	3. Now switch to the "**root user**" (you can use the ```su``` command, no need to log off)
+	4. Next append the lines from the lab7_testing.conf to /etc/system.conf.
+		- Under the root account you can use ```nano /etc/system.conf``` to edit this file.
+	5. Go back to the "**lcom user**" (you can use the ```exit``` command).
+3. The following steps need to be performed on one machine at a time.
+	1. First let's setup the receiver side (RX side), execute the following command on one of the Virtual Machines: ```lcom_run ./lab7_testing "com 1 rx 8 1 none 115200"```
+	2. Secondly let's setup the sender side (TX side), execute the following command on the other Virtual Machine: ```lcom_run ./lab7_testing "com 1 tx 8 1 none 115200 testing_serial_communication"```
+
+If you see something like this:
+	1. INSERT PHOTO
+You've archived serial communication between the two Virtual Machines.
+You can now stop the service by running ```lcom_stop lab7_testing``` (on the RX side you may need to do "**CTRL + C**" first).
+
+Next step is to do a clean-up:
+- Delete the lab7_testing file.
+- Delete the previously appended lines on /etc/system.conf.
 # IMPORTANT
 
 You must be careful while doing some things as they might crash (or worst brick) your computer. These include:
 
 - Do not shutdown the virtual machine without unmounting the minix disk from the host OS.
-    - If you happen to do this you'll find out that Finder will become unresponsive and if this does not crash your computer you'll certently not have a good time unmounting the disks or gracefully shutting down your machine. If you accidently do this you can try the following:
+    - If you happen to do this you'll find out that Finder will become unresponsive and if this does not crash your computer you'll certainly not have a good time unmounting the disks or gracefully shutting down your machine. If you accidentally do this you can try the following:
         - Somehow opening a terminal window and performing the unmount command (note that while in this state the tab autocomplete may render the current shell unusable.)
-        - Forcefully shutting down your machine (May corrupt files / render your machine unbootable.)
+        - Forcefully shutting down your machine (May corrupt files / render your machine un-bootable.)
 
+# Credits
+
+A special thanks to [Professor Pedro Ferreira Souto](https://sigarra.up.pt/feup/pt/func_geral.formview?p_codigo=238172) for the files that helped me debug the serial port communication [Original Files](https://web.fe.up.pt/~pfs/aulas/lcom2018/proj/ser_port_test_setup.html) and his guides that helped me a lot.
+
+Do note that the tutorial is not endorsed by, affiliated with, maintained, authorized, or sponsored by [Professor Pedro Ferreira Souto](https://sigarra.up.pt/feup/pt/func_geral.formview?p_codigo=238172).
 
 
