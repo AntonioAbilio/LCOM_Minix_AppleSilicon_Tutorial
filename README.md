@@ -135,11 +135,16 @@ Like I said before we are going to use macFUSE and SSHFS. Both can be downloaded
 # Serial Ports
 
 This does not need to be configured at the moment however, it's here for future proofing sake.
+
+## Serial Port between two Virtual Machines
 Let's begin:
 
 1.  First open [UTM](UTM://).
 2. Select your first Virtual Machine and left-click it.
 3. Now select "**clone**".
+	<div style="display: flex; justify-content: center;">
+		  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/2f4c536766cbddbbcbc23c8fc4953cb0b819a8f2/Resources/Serial/Serial_1.png?raw=true") alt="Clone_Machine">
+	</div>
 4. Open the "**settings**" of the Virtual Machine.
 5. Under "**devices**" click the "**+**" icon and select "**Serial**".
 	<div style="display: flex; justify-content: center;">
@@ -150,12 +155,16 @@ Let's begin:
 		  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/b52bd947c5c015807efa664e4c6d3d2f299aa038/Resources/Serial/Serial_Port_Conf_1.png?raw=true") alt="Serial_Port_Configuration_FirstVM">
 	</div>
 7. Now select the cloned Virtual Machine and repeat the steps 4 and 5.
-8. Now change your values so the configuration looks like this ... and save it
+8. Now change your values so the configuration looks like this:
 	<div style="display: flex; justify-content: center;">
 		  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/b52bd947c5c015807efa664e4c6d3d2f299aa038/Resources/Serial/Serial_Port_Conf_2.png?raw=true") alt="Serial_Port_Configuration_SecondVM">
 	</div>
 
-
+9. Under "**Network**" click the random for Mac Address.
+	1. INSERT PHOTO
+10. Under "**Port Forwarding**" click on the first option and next click on the "**Edit**" button. Make sure the values are as follows ... click "**Save**":
+	1. INSERT PHOTO
+11. Finally save all changes by clicking "**Save**".
 
 # IMPORTANT
 
