@@ -6,6 +6,8 @@ If you do have any problems in this tutorial I will try my best to help you reso
 
 Also I want to make a small appeal. There exists a beta version of VirtualBox that will run on Apple Silicon however, SSH and networking functionalities are currently broken. If you find a fix please inform me so I can update this tutorial.
 
+**After finishing the tutorial please do not forget to read the section "IMPORTANT".**
+
 # Pre-requisites
 - We will use [UTM](https://mac.getutm.app) to emulate x86.
 
@@ -130,6 +132,14 @@ Like I said before we are going to use macFUSE and SSHFS. Both can be downloaded
 1. Create a script to start up the virtual machine and mount / unmount the drive automatically.
 	- ```open "utm://start?name=Virtual_Machine_Name"``` This allows you to start up the virtual machine from terminal.
 
+# IMPORTANT
+
+You must be careful while doing some things as they might crash (or worst brick) your computer. These include:
+
+- Do not shutdown the virtual machine without unmounting the minix disk from the host OS.
+	- If you happen to do this you'll find out that Finder will become unresponsive and if this does not crash your computer you'll certently not have a good time unmounting the disks or gracefully shutting down your machine. If you accidently do this you can try the following:
+		- Somehow opening a terminal window and performing the unmount command (note that while in this state the tab autocomplete may render the current shell unusable.)
+		- Forcefully shutting down your machine (May corrupt files / render your machine unbootable.)
 
 
 
