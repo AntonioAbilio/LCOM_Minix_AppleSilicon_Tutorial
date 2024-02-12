@@ -179,10 +179,10 @@ Let's begin:
 	<div style="display: flex; justify-content: center;">
 		  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/29c418e65bb22e4445e56e575d17d534b825d379/Resources/Serial/Serial_Network_2.png?raw=true") alt="Serial_Port_Configuration_SecondVM">
 	</div>
-	- Make sure the values are as follows ... click "**Save**":
-		<div style="display: flex; justify-content: center;">
+ - Make sure the values are as follows ... click "**Save**":
+	<div style="display: flex; justify-content: center;">
 			  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/29c418e65bb22e4445e56e575d17d534b825d379/Resources/Serial/Serial_Network_3.png?raw=true") alt="Serial_Port_Configuration_SecondVM">
-		</div>
+	</div>
 
 11. Finally save all changes by clicking "**Save**".
 
@@ -210,9 +210,11 @@ The provided program saved me a whole lot of time.
 	2. Secondly let's setup the sender side (TX side), execute the following command on the other Virtual Machine: ```lcom_run ./lab7_testing "com 1 tx 8 1 none 115200 testing_serial_communication"```
 
 If you see something like this:
-	<div style="display: flex; justify-content: center;">
+
+<div style="display: flex; justify-content: center;">
 			  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/5fa2b9f0b0c4efd9a67179a5b9a42295170dc211/Resources/Serial/Serial_Result.png?raw=true") alt="Serial_Port_Configuration_SecondVM">
-	</div>
+</div>
+ 
 You've archived serial communication between the two Virtual Machines.
 You can now stop the service by running ```lcom_stop lab7_testing``` (on the RX side you may need to do "**CTRL + C**" first).
 
@@ -239,6 +241,6 @@ You must be careful while doing some things as they might crash (or worst brick)
 
 A special thanks to [Professor Pedro Ferreira Souto](https://sigarra.up.pt/feup/pt/func_geral.formview?p_codigo=238172) for the files that helped me debug the serial port communication [Original Files](https://web.fe.up.pt/~pfs/aulas/lcom2018/proj/ser_port_test_setup.html) and his guides that helped me a lot.
 
-**Do note that the tutorial is not endorsed by, affiliated with, maintained, authorized, or sponsored by **[Professor Pedro Ferreira Souto](https://sigarra.up.pt/feup/pt/func_geral.formview?p_codigo=238172).
+**Do note that the tutorial is not endorsed by, affiliated with, maintained, authorized, or sponsored by** [Professor Pedro Ferreira Souto](https://sigarra.up.pt/feup/pt/func_geral.formview?p_codigo=238172).
 
 
