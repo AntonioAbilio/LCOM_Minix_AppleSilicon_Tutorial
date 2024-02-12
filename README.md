@@ -132,7 +132,7 @@ Like I said before we are going to use macFUSE and SSHFS. Both can be downloaded
 1. Create a script to start up the virtual machine and mount / unmount the drive automatically.
     - ```open "utm://start?name=Virtual_Machine_Name"``` This allows you to start up the virtual machine from terminal.
 
-# Serial Ports
+# Serial Ports (Not fully tested)
 
 This does not need to be configured at the moment however, it's here for future proofing sake.
 
@@ -146,6 +146,7 @@ Let's begin:
 	<div style="display: flex; justify-content: center;">
 		  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/2f4c536766cbddbbcbc23c8fc4953cb0b819a8f2/Resources/Serial/Serial_1.png?raw=true") alt="Clone_Machine">
 	</div>
+
 4. Open the "**settings**" of the Virtual Machine.
 
 5. Under "**devices**" click the "**+**" icon and select "**Serial**".
@@ -178,7 +179,7 @@ Let's begin:
 	<div style="display: flex; justify-content: center;">
 		  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/29c418e65bb22e4445e56e575d17d534b825d379/Resources/Serial/Serial_Network_2.png?raw=true") alt="Serial_Port_Configuration_SecondVM">
 	</div>
-	1. Make sure the values are as follows ... click "**Save**":
+	- Make sure the values are as follows ... click "**Save**":
 		<div style="display: flex; justify-content: center;">
 			  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/29c418e65bb22e4445e56e575d17d534b825d379/Resources/Serial/Serial_Network_3.png?raw=true") alt="Serial_Port_Configuration_SecondVM">
 		</div>
@@ -198,8 +199,8 @@ The provided program saved me a whole lot of time.
 
 1. Turn on both VM's (note: The second machine will not turn on unless the first one is on).
 2. The next steps need to be performed on both Virtual Machines:
-	1. Now copy the "**lab7_testing" file to your minix's user home directory.
-	2. Next cd to the directory where the file was copied to and execute the following command ``` chmod +x ./lab7_testing ```
+	1. Copy the "**lab7_testing" file to your minix's user home directory.
+	2. Next cd to the directory where the file was copied to and execute the following command ``` chmod +x ./lab7_testing```
 	3. Now switch to the "**root user**" (you can use the ```su``` command, no need to log off)
 	4. Next append the lines from the lab7_testing.conf to /etc/system.conf.
 		- Under the root account you can use ```nano /etc/system.conf``` to edit this file.
@@ -209,7 +210,9 @@ The provided program saved me a whole lot of time.
 	2. Secondly let's setup the sender side (TX side), execute the following command on the other Virtual Machine: ```lcom_run ./lab7_testing "com 1 tx 8 1 none 115200 testing_serial_communication"```
 
 If you see something like this:
-	1. INSERT PHOTO
+	<div style="display: flex; justify-content: center;">
+			  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/5fa2b9f0b0c4efd9a67179a5b9a42295170dc211/Resources/Serial/Serial_Result.png?raw=true") alt="Serial_Port_Configuration_SecondVM">
+	</div>
 You've archived serial communication between the two Virtual Machines.
 You can now stop the service by running ```lcom_stop lab7_testing``` (on the RX side you may need to do "**CTRL + C**" first).
 
@@ -217,6 +220,13 @@ Next step is to do a clean-up:
 - Delete the lab7_testing file.
 - Delete the previously appended lines on /etc/system.conf.
 # IMPORTANT
+
+## Good to keep in mind
+
+UTM does not support creation of snapshots. This means that if something goes wrong you'd have to redo everything. This is not ideal. 
+To prevent this from happening you can always clone your Virtual Machine before doing any dangerous alterations (Not the best solution but it works).
+
+## Things to be careful with
 
 You must be careful while doing some things as they might crash (or worst brick) your computer. These include:
 
@@ -229,6 +239,6 @@ You must be careful while doing some things as they might crash (or worst brick)
 
 A special thanks to [Professor Pedro Ferreira Souto](https://sigarra.up.pt/feup/pt/func_geral.formview?p_codigo=238172) for the files that helped me debug the serial port communication [Original Files](https://web.fe.up.pt/~pfs/aulas/lcom2018/proj/ser_port_test_setup.html) and his guides that helped me a lot.
 
-Do note that the tutorial is not endorsed by, affiliated with, maintained, authorized, or sponsored by [Professor Pedro Ferreira Souto](https://sigarra.up.pt/feup/pt/func_geral.formview?p_codigo=238172).
+**Do note that the tutorial is not endorsed by, affiliated with, maintained, authorized, or sponsored by **[Professor Pedro Ferreira Souto](https://sigarra.up.pt/feup/pt/func_geral.formview?p_codigo=238172).
 
 
