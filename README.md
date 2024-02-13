@@ -6,7 +6,7 @@ If you do have any problems in this tutorial I will try my best to help you reso
 
 Also I want to make a small appeal. There exists a beta version of VirtualBox that will run on Apple Silicon however, SSH and networking functionalities are currently broken. If you find a fix please inform me so I can update this tutorial.
 
-**After finishing the tutorial please do not forget to read the section "IMPORTANT".**
+**After finishing the tutorial please do not forget to read the section "IMPORTANT" and to go back to moodle to read the guides for the labs.**
 
 # Pre-requisites
 - We will use [UTM](https://mac.getutm.app) to emulate x86.
@@ -19,41 +19,145 @@ Also I want to make a small appeal. There exists a beta version of VirtualBox th
 
 # Instructions
 
+
 1. Open UTM and select "Create a New Virtual Machine".
+
+
+<div style="display: flex; justify-content: center;">
+  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/91704fcca47ec2ccb3bd397b37b955dc1aafb6f3/Resources/Instruction_Images/1.png?raw=true") >
+</div>
+
+
 2. Now select "Emulate" followed by "Other".
+
+
+<div style="display: flex; justify-content: center;">
+  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/91704fcca47ec2ccb3bd397b37b955dc1aafb6f3/Resources/Instruction_Images/2.png?raw=true") >
+</div>
+<div style="display: flex; justify-content: center;">
+  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/91704fcca47ec2ccb3bd397b37b955dc1aafb6f3/Resources/Instruction_Images/3.png?raw=true") >
+</div>
+
+
 3. Check the box "Skip ISO boot". **(continue)**
     - We do not want to install an operating system using an ISO image because the OS is already provided.
-4. In Hardware do the following:
+
+
+<div style="display: flex; justify-content: center;">
+  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/91704fcca47ec2ccb3bd397b37b955dc1aafb6f3/Resources/Instruction_Images/4.png?raw=true") >
+</div>
+
+
+6. In Hardware do the following:
     - Set Architecture to "i386 (x86)".
     - System to "Standard PC (i440FX + PIIX, 1996) (pc-i440fx-7.1)".
     - Memory to "1536 MB". (This is what is used in VirtualBox.)
     - CPU Cores to "1". (This is what is used in VirtualBox.)
     - **(continue)**
-5. You can specify anything under Storage as we will not use this disk. **(continue)**
-6. Shared Directory should also be ignored for now we will deal with this later. **(continue)**
-7. In Summary do the following:
+
+
+<div style="display: flex; justify-content: center;">
+  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/91704fcca47ec2ccb3bd397b37b955dc1aafb6f3/Resources/Instruction_Images/5.png?raw=true") >
+</div>
+
+
+7. You can specify anything under Storage as we will not use this disk. **(continue)**
+
+
+<div style="display: flex; justify-content: center;">
+  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/91704fcca47ec2ccb3bd397b37b955dc1aafb6f3/Resources/Instruction_Images/6.png?raw=true") >
+</div>
+
+
+9. Shared Directory should also be ignored for now we will deal with this later. **(continue)**
+
+
+<div style="display: flex; justify-content: center;">
+  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/91704fcca47ec2ccb3bd397b37b955dc1aafb6f3/Resources/Instruction_Images/7.png?raw=true") >
+</div>
+
+
+11. In Summary do the following:
     - Name: Can be anything.
     - Check the box "Open VM Settings"
     - Press "**(Save)**"
-8. You should now see a new Menu.
+
+
+<div style="display: flex; justify-content: center;">
+  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/91704fcca47ec2ccb3bd397b37b955dc1aafb6f3/Resources/Instruction_Images/8.png?raw=true") >
+</div>
+
+
+12. You should now see a new Menu.
 ##### The next modifications need to be done before we can turn on our Virtual Machine otherwise minix will not work properly (Kernel Panic).
 
+
 9. Under "**QEMU**" uncheck "UEFI Boot" and "RNG Device" and check "Force PS/2 controller".
-10. Under "**Input**" set "USB Support "to "Disabled" (USB 2.0 is unsupported by minix).
-11. Disable "**Sharing**".
-12. Under "**Display**" set "**Emulated Display Card**" to "virtio-vga".
-13. Under "**Network**" do the following:
+
+
+<div style="display: flex; justify-content: center;">
+  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/91704fcca47ec2ccb3bd397b37b955dc1aafb6f3/Resources/Instruction_Images/9.png?raw=true") >
+</div>
+
+
+11. Under "**Input**" set "USB Support "to "Disabled" (USB 2.0 is unsupported by minix).
+
+
+<div style="display: flex; justify-content: center;">
+  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/91704fcca47ec2ccb3bd397b37b955dc1aafb6f3/Resources/Instruction_Images/10.png?raw=true") >
+</div>
+
+
+12. Disable "**Sharing**".
+
+
+<div style="display: flex; justify-content: center;">
+  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/91704fcca47ec2ccb3bd397b37b955dc1aafb6f3/Resources/Instruction_Images/11.png?raw=true") >
+</div>
+
+
+13. Under "**Display**" set "**Emulated Display Card**" to "virtio-vga".
+
+
+<div style="display: flex; justify-content: center;">
+  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/91704fcca47ec2ccb3bd397b37b955dc1aafb6f3/Resources/Instruction_Images/12.png?raw=true") >
+</div>
+
+
+14. Under "**Network**" do the following:
     - Select "Emulated VLAN" in "**Network Mode**".
     - Select "virtio-net-pci" in "**Emulated Network Card**".
     - And set the "**MAC Address**" to "08:00:27:99:34:53". (Same as VirtualBox.)
+   
+	<div style="display: flex; justify-content: center;">
+  		<img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/91704fcca47ec2ccb3bd397b37b955dc1aafb6f3/Resources/Instruction_Images/13.png?raw=true") >
+	</div>
+
     - Under "**Port Forwarding**" select "**New**" and do:
         - **TCP as Protocol**
         - **Leave black for first input.**
         - **Set 22 for second input**
         - **Leave black for third input.**
         - **Set 2222 for forth input**
-14. Under Sound select "**Intel 82801AA AC97 Audio (AC97)**" for "**Emulated Audio Card**".
-15. Now finally under Drives delete the only **IDE Drive** that is present and click **New** followed by **Import...** and finally select the qcow2 disk.
+     
+	<div style="display: flex; justify-content: center;">
+  		<img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/91704fcca47ec2ccb3bd397b37b955dc1aafb6f3/Resources/Instruction_Images/14.png?raw=true") >
+	</div>
+     
+
+15. Under Sound select "**Intel 82801AA AC97 Audio (AC97)**" for "**Emulated Audio Card**".
+
+<div style="display: flex; justify-content: center;">
+  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/91704fcca47ec2ccb3bd397b37b955dc1aafb6f3/Resources/Instruction_Images/16.png?raw=true") >
+</div>
+
+16. Now finally under Drives delete the only **IDE Drive** that is present and click **New** followed by **Import...** and finally select the qcow2 disk.
+
+<div style="display: flex; justify-content: center;">
+  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/91704fcca47ec2ccb3bd397b37b955dc1aafb6f3/Resources/Instruction_Images/17.png?raw=true") >
+  <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/91704fcca47ec2ccb3bd397b37b955dc1aafb6f3/Resources/Instruction_Images/18.png?raw=true") >
+</div>
+
 
 # First boot
 
@@ -67,9 +171,30 @@ Let's start by fixing this.
 2. Switch to root user by doing: ```minix$ su```
 3. Now let's do a series of steps:
     - ```minix$ netconf```
-    - ```Select option 1 which should be vio0``` 
+    - ```Select option 1 which should be vio0```
+
+  
+	<div style="display: flex; justify-content: center;">
+ 		 <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/6d8d46f0ccd148fe498d9613f6d313edd78bc562/Resources/network_images/1.png?raw=true") >
+	</div>
+ 
+
     - ```Select option 1```
+
+  
+	<div style="display: flex; justify-content: center;">
+ 		 <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/6d8d46f0ccd148fe498d9613f6d313edd78bc562/Resources/network_images/2.png?raw=true") >
+	</div>  
+ 
+
     - ```Select option 2```
+
+  
+	<div style="display: flex; justify-content: center;">
+ 		 <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/6d8d46f0ccd148fe498d9613f6d313edd78bc562/Resources/network_images/3.png?raw=true") >
+	</div>
+ 
+
     - ```minix$ service network restart```
     - ```minix$ reboot```
 4. Great! Network should now be working.
@@ -81,7 +206,7 @@ SSH should be configured by now, let's try to connect to our guest OS.
 1. Open the terminal app on macOS and execute the following command: ```$ ssh lcom@127.0.0.1 -p 2222```
     - If it asks to accept a fingerprint say yes.
     - You should also be asked to login. Do login :)
-2. If everything is working properlly then you should see ```minix$ ```
+2. If everything is working properlly then you should see ```minix$```
 3. SSH should also work properlly now.
 
 
