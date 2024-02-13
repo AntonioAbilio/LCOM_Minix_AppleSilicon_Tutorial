@@ -6,7 +6,7 @@ If you do have any problems in this tutorial I will try my best to help you reso
 
 Also I want to make a small appeal. There exists a beta version of VirtualBox that will run on Apple Silicon however, SSH and networking functionalities are currently broken. If you find a fix please inform me so I can update this tutorial.
 
-**After finishing the tutorial please do not forget to read the section "IMPORTANT".**
+**After finishing the tutorial please do not forget to read the section "IMPORTANT" and to go back to moodle to read the guides for the labs.**
 
 # Pre-requisites
 - We will use [UTM](https://mac.getutm.app) to emulate x86.
@@ -171,9 +171,30 @@ Let's start by fixing this.
 2. Switch to root user by doing: ```minix$ su```
 3. Now let's do a series of steps:
     - ```minix$ netconf```
-    - ```Select option 1 which should be vio0``` 
+    - ```Select option 1 which should be vio0```
+
+  
+	<div style="display: flex; justify-content: center;">
+ 		 <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/6d8d46f0ccd148fe498d9613f6d313edd78bc562/Resources/network_images/1.png?raw=true") >
+	</div>
+ 
+
     - ```Select option 1```
+
+  
+	<div style="display: flex; justify-content: center;">
+ 		 <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/6d8d46f0ccd148fe498d9613f6d313edd78bc562/Resources/network_images/2.png?raw=true") >
+	</div>  
+ 
+
     - ```Select option 2```
+
+  
+	<div style="display: flex; justify-content: center;">
+ 		 <img src="https://github.com/AntonioAbilio/LCOM_Minix_AppleSilicon_Tutorial/blob/6d8d46f0ccd148fe498d9613f6d313edd78bc562/Resources/network_images/3.png?raw=true") >
+	</div>
+ 
+
     - ```minix$ service network restart```
     - ```minix$ reboot```
 4. Great! Network should now be working.
@@ -185,7 +206,7 @@ SSH should be configured by now, let's try to connect to our guest OS.
 1. Open the terminal app on macOS and execute the following command: ```$ ssh lcom@127.0.0.1 -p 2222```
     - If it asks to accept a fingerprint say yes.
     - You should also be asked to login. Do login :)
-2. If everything is working properlly then you should see ```minix$ ```
+2. If everything is working properlly then you should see ```minix$```
 3. SSH should also work properlly now.
 
 
