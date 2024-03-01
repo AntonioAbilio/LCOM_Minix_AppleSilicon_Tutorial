@@ -1,3 +1,18 @@
+# Recent developments 
+
+Before proceeding read this first:
+
+Some virtual box versions work on AppleSilicon with the only issue being that there is no internet / ssh connection.
+Due to the complexity of the tutorial I would only recommend following it if you really know what your doing.
+
+Here is the list of working versions ( note: some versions work better than others )
+
+- https://download.virtualbox.org/virtualbox/7.0.8/VirtualBox-7.0.8_BETA4-156879-macOSArm64.dmg
+- https://www.virtualbox.org/download/testcase/VirtualBox-7.0.15_BETA4-161407-macOSArm64.dmg
+- https://download.virtualbox.org/virtualbox/7.0.0_BETA1/VirtualBox-7.0.0_BETA1-153351-macOSAArch64.dmg
+
+If you decide to follow keep in mind that there is no "shared folder". You can still share files across systems but the shared folder requieres the use of Virtual Box.
+
 # Notes
 
 **All software provided here is offered 'AS IS'. I will not be responsible for any damage that happens while following this tutorial.**
